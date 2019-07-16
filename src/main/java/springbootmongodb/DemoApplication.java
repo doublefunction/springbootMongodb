@@ -1,11 +1,11 @@
-package springbootmongodb.demo;
+package springbootmongodb;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
-@ComponentScan(basePackages = {"springbootmongodb.*"})
+//@ComponentScan(basePackages = {"springbootmongodb.*"})
 public class DemoApplication {
 
     public static void main(String[] args) {
