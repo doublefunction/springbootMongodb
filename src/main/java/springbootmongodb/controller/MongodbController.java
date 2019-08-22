@@ -42,7 +42,20 @@ public class MongodbController {
     public DeviceBaseInfo query() throws Exception {
         DeviceBaseInfo deviceBaseInfo = deviceBaseInfoService.findByDeviceId("lic00002");
         return deviceBaseInfo;
-
+    }
+    @RequestMapping("/insert")
+    @ResponseBody
+    public String insert(){
+        try {
+            DeviceBaseInfo deviceBaseInfo = new DeviceBaseInfo();
+            deviceBaseInfo.setDeviceId("lic00003");
+            deviceBaseInfo.setProductKey("a1uulxMWCKh");
+            deviceBaseInfo.setDeviceName("866289032062491");
+            deviceBaseInfoService.insert(deviceBaseInfo);
+        }catch (Exception e ){
+            return "false";
+        }
+        return "true";
     }
 
 }

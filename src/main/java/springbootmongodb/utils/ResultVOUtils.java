@@ -1,7 +1,8 @@
 package springbootmongodb.utils;
 
-import com.vulnova.device.VO.ResultVO;
-import com.vulnova.device.enums.ResultEnums;
+
+import springbootmongodb.VO.ResultVO;
+import springbootmongodb.enums.ResultEnums;
 
 
 /**

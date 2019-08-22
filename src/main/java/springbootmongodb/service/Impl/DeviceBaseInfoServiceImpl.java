@@ -1,5 +1,6 @@
 package springbootmongodb.service.Impl;
 
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.data.mongodb.core.query.Criteria;
@@ -13,6 +14,7 @@ import springbootmongodb.service.DeviceBaseInfoService;
 
 import javax.servlet.http.HttpServletResponse;
 @Service
+@Slf4j
 public class DeviceBaseInfoServiceImpl implements DeviceBaseInfoService {
 
     @Autowired
@@ -26,8 +28,19 @@ public class DeviceBaseInfoServiceImpl implements DeviceBaseInfoService {
     }
 
     @Override
-    public Integer insert(DeviceBaseInfo deviceBaseInfo) {
-        return null;
+    public void insert(DeviceBaseInfo deviceBaseInfo) {
+         this.mongoTemplate.insert(deviceBaseInfo);
+         log.info("设备插入成功");
+    }
+
+    @Override
+    public void update(DeviceBaseInfo deviceBaseInfo) {
+
+    }
+
+    @Override
+    public void delete(String deviceId) {
+
     }
 
 }

@@ -19,11 +19,9 @@
 package springbootmongodb.utils;
 
 import com.aliyuncs.iot.model.v20180120.*;
-import com.vulnova.device.aliyun.openApi.Abstract;
 
-import java.util.Base64;
-
-import static com.vulnova.device.aliyun.openApi.Abstract.executeTest;
+import org.apache.tomcat.util.codec.binary.Base64;
+import springbootmongodb.aliyun.openApi.Abstract;
 
 /**
  * 操纵设备

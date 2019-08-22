@@ -4,5 +4,7 @@ import springbootmongodb.model.DeviceBaseInfo;
 
 public interface DeviceBaseInfoService {
     DeviceBaseInfo findByDeviceId(String deviceId);
-    Integer insert(DeviceBaseInfo deviceBaseInfo);
+    void insert(DeviceBaseInfo deviceBaseInfo);
+    void update(DeviceBaseInfo deviceBaseInfo);
+    void delete(String deviceId);
 }
